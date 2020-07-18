@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProbnaWpfAplikacija.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProbnaWpfAplikacija"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="ZatvaraSe">
+	<StackPanel>
+	<StackPanel Name="stackZaOsobu">
+		<TextBox FontSize="48" Text="{Binding Ime, UpdateSourceTrigger=PropertyChanged}"/>
+		<TextBox FontSize="48" Text="{Binding Broj, UpdateSourceTrigger=PropertyChanged}"/>
+		<Label Content="{Binding Ime}" FontSize="42"/>
+		<Label Content="{Binding Broj}" FontSize="42"/>
+		<Button FontSize="48" Click="MetodaZaKlik" Content="Test"/>
+	</StackPanel>
+	<StackPanel Name="DrugiStack">
+		<Label Content="{Binding Nesto}" FontSize="48"/>
+	</StackPanel>
+	</StackPanel>
+</Window>
